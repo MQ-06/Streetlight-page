@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  
+  --background: 230 40% 5%; 
+  --foreground: 0 0% 100%;
+  --card: 230 40% 8%; 
+  --card-foreground: 0 0% 95%;
+  --popover: 230 40% 5%;
+  --popover-foreground: 0 0% 95%;
+  --primary: 40 89% 61%;
+  --primary-foreground: 230 40% 5%;
+  --border: 230 20% 15%;
+  --input: 230 20% 15%;
+  --ring: 40 89% 61%;
+  
+  --streetlight-dark: #0B0F14;
+  --streetlight-charcoal: #1a1f28;
+  --streetlight-gold: #F4B942;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .light-beam {
+    background: radial-gradient(
+      ellipse at top, 
+      rgba(244, 185, 66, 0.8) 0%, 
+      rgba(244, 185, 66, 0.4) 30%, 
+      rgba(244, 185, 66, 0.1) 60%, 
+      transparent 100%
+    );
+    clip-path: polygon(48% 0, 52% 0, 100% 100%, 0 100%);
+    filter: blur(16px);
+    mix-blend-mode: screen;
+  }
+  
+  .film-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 40px rgba(244, 185, 66, 0.3),
+                 0 0 80px rgba(244, 185, 66, 0.2);
+  }
+  
+  /* Hide ugly search cancel button in Chrome until we can style it properly */
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+}
+
