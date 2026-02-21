@@ -58,7 +58,7 @@ const StreetLightHero = () => {
                delay: 0.5,
                ease: "easeOut"
              }}
-             className="absolute top-full left-1/2 -translate-x-1/2 w-8 h-4 bg-primary rounded-full blur-[4px]"
+             className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-8 h-4 bg-primary rounded-full blur-[4px]"
            />
         </div>
       </div>
@@ -125,11 +125,11 @@ const StreetLightHero = () => {
         >
           <p 
             data-testid="text-subtext"
-            className="text-sm md:text-base font-light text-primary/40 tracking-[0.3em] uppercase mb-16 flex items-center justify-center gap-4"
+            className="text-sm md:text-base font-light text-black tracking-[0.3em] uppercase mb-16 flex items-center justify-center gap-4 text-bold"
           >
-            <span className="h-[1px] w-8 bg-primary/20" />
+            <span className="h-[1px] w-8 bg-black text-bold" />
             Built in Pakistan. Built for Pakistan.
-            <span className="h-[1px] w-8 bg-primary/20" />
+            <span className="h-[1px] w-8 bg-black text-bold" />
           </p>
         </motion.div>
 
