@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'StreetLight | Civic Reporting Platform for Pakistan',
-  description: 'A citizen-powered civic reporting platform bringing transparency and accountability to Pakistani cities. Report potholes, garbage, broken streetlights, and road hazards.',
+  title: 'StreetLight | No Civic Hazard Should Remain in the Dark',
+  description: 'An AI-powered, blockchain-secured civic management platform that bridges the gap between citizens and municipal authorities in Pakistan\'s rapidly urbanizing cities.',
   keywords: ['civic tech', 'pakistan', 'civic reporting', 'streetlight', 'transparency', 'accountability'],
   authors: [{ name: 'StreetLight Team' }],
   creator: 'StreetLight',

@@ -28,18 +28,18 @@ const StreetLightHero = () => {
     <main className="relative min-h-screen w-full overflow-hidden bg-background selection:bg-primary/30 selection:text-primary">
       {/* Background Image with Darkness Overlay */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat brightness-90"
         style={{ 
           backgroundImage: `url(/images/dark-road.png)`,
           backgroundPosition: 'center center',
         }}
       />
-      <div className="absolute inset-0 z-0 bg-[#05050A]/90" />
+      <div className="absolute inset-0 z-0 bg-[#05050A]/95" />
       
       {/* Film Grain Texture for Cinematic Feel */}
       <div className="film-grain absolute inset-0 z-50 pointer-events-none" />
 
-      {/* Streetlight Pole and Head */}
+      {/* Streetlight Pole and Head - Centered */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center z-10 w-full h-[15vh]">
         {/* The Pole */}
         <div className="w-[3px] h-[80%] bg-zinc-800" />
@@ -63,8 +63,8 @@ const StreetLightHero = () => {
         </div>
       </div>
 
-      {/* The Light Beam */}
-      <div className="absolute inset-0 z-10 flex justify-center overflow-hidden pt-[15vh]">
+      {/* The Light Beam - Centered */}
+      <div className="absolute inset-0 z-10 flex justify-center items-start overflow-hidden pt-[15vh]">
         <motion.div
           initial={{ opacity: 0, height: "0%" }}
           animate={{ opacity: 1, height: "100%" }}
@@ -73,7 +73,7 @@ const StreetLightHero = () => {
             delay: 1.2, 
             ease: [0.25, 0.1, 0.25, 1] // Custom cubic bezier for smooth reveal
           }}
-          className="light-beam w-full max-w-[1200px] origin-top"
+          className="light-beam w-full max-w-[1400px] origin-top mx-auto"
         >
           {/* Dust Particles inside the beam */}
           {particles.map((p) => (
@@ -125,11 +125,11 @@ const StreetLightHero = () => {
         >
           <p 
             data-testid="text-subtext"
-            className="text-sm md:text-base font-light text-primary/60 tracking-[0.3em] uppercase mb-16 flex items-center justify-center gap-4"
+            className="text-sm md:text-base font-light text-primary/40 tracking-[0.3em] uppercase mb-16 flex items-center justify-center gap-4"
           >
-            <span className="h-[1px] w-8 bg-primary/30" />
+            <span className="h-[1px] w-8 bg-primary/20" />
             Built in Pakistan. Built for Pakistan.
-            <span className="h-[1px] w-8 bg-primary/30" />
+            <span className="h-[1px] w-8 bg-primary/20" />
           </p>
         </motion.div>
 
@@ -141,16 +141,22 @@ const StreetLightHero = () => {
         >
           <button 
             data-testid="button-primary"
-            className="px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-md shadow-[0_0_20px_rgba(244,185,66,0.4)] hover:shadow-[0_0_30px_rgba(244,185,66,0.6)] transition-shadow duration-300 tracking-wide"
+            className="px-10 py-4 bg-gradient-to-r from-primary via-[#f5c456] to-primary text-[#0B0F14] font-bold rounded-xl shadow-[0_0_25px_rgba(244,185,66,0.5)] hover:shadow-[0_0_40px_rgba(244,185,66,0.7)] hover:scale-105 transition-all duration-300 tracking-wide uppercase text-sm"
           >
             Coming Soon
           </button>
-          <button 
+          <a 
+            href="https://github.com/MQ-06/STREETLIGHT-PK"
+            target="_blank"
+            rel="noopener noreferrer"
             data-testid="button-secondary"
-            className="px-8 py-4 bg-transparent text-primary border border-primary/40 hover:bg-primary/5 hover:border-primary transition-colors duration-300 font-medium rounded-md tracking-wide"
+            className="group px-10 py-4 bg-white/5 backdrop-blur-sm text-white border-2 border-white/20 hover:bg-white/10 hover:border-white/40 transition-all duration-300 font-semibold rounded-xl tracking-wide uppercase text-sm flex items-center gap-2"
           >
-            Learn More
-          </button>
+            <span>Learn More</span>
+            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </motion.div>
       </div>
       

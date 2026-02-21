@@ -14,6 +14,12 @@
   --popover-foreground: 0 0% 95%;
   --primary: 40 89% 61%;
   --primary-foreground: 230 40% 5%;
+  --secondary: 0 0% 100%;
+  --secondary-foreground: 230 40% 5%;
+  --accent: 40 89% 61%;
+  --accent-foreground: 230 40% 5%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
   --border: 230 20% 15%;
   --input: 230 20% 15%;
   --ring: 40 89% 61%;
@@ -52,13 +58,13 @@ body {
   .light-beam {
     background: radial-gradient(
       ellipse at top, 
-      rgba(244, 185, 66, 0.8) 0%, 
-      rgba(244, 185, 66, 0.4) 30%, 
-      rgba(244, 185, 66, 0.1) 60%, 
+      rgba(244, 185, 66, 0.9) 0%, 
+      rgba(244, 185, 66, 0.5) 30%, 
+      rgba(244, 185, 66, 0.2) 60%, 
       transparent 100%
     );
-    clip-path: polygon(48% 0, 52% 0, 100% 100%, 0 100%);
-    filter: blur(16px);
+    clip-path: polygon(45% 0, 55% 0, 100% 100%, 0 100%);
+    filter: blur(20px);
     mix-blend-mode: screen;
   }
   
