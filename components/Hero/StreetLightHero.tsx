@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 // Simple utility to create an array of random particles
@@ -113,7 +114,7 @@ const StreetLightHero = () => {
             data-testid="text-headline"
             className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#FFFDF8] glow-text leading-[1.1] mb-8"
           >
-            No Civic Hazard Should<br className="hidden md:block" /> Remain in the Dark.
+            See It. Report It.<br className="hidden md:block" /> Fix the City Together.
           </h1>
         </motion.div>
 
@@ -128,7 +129,7 @@ const StreetLightHero = () => {
             className="text-sm md:text-base font-light text-black tracking-[0.3em] uppercase mb-16 flex items-center justify-center gap-4 text-bold"
           >
             <span className="h-[1px] w-8 bg-black text-bold" />
-            Built in Pakistan. Built for Pakistan.
+            Report city problems quickly, transparently, effectively.
             <span className="h-[1px] w-8 bg-black text-bold" />
           </p>
         </motion.div>
@@ -137,26 +138,15 @@ const StreetLightHero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 4.5, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row items-center gap-6"
+          className="flex items-center justify-center"
         >
-          <button 
+          <Link
+            href="/project"
             data-testid="button-primary"
             className="px-10 py-4 bg-gradient-to-r from-primary via-[#f5c456] to-primary text-[#0B0F14] font-bold rounded-xl shadow-[0_0_25px_rgba(244,185,66,0.5)] hover:shadow-[0_0_40px_rgba(244,185,66,0.7)] hover:scale-105 transition-all duration-300 tracking-wide uppercase text-sm"
           >
-            Coming Soon
-          </button>
-          <a 
-            href="https://github.com/MQ-06/STREETLIGHT-PK"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid="button-secondary"
-            className="group px-10 py-4 bg-white/5 backdrop-blur-sm text-white border-2 border-white/20 hover:bg-white/10 hover:border-white/40 transition-all duration-300 font-semibold rounded-xl tracking-wide uppercase text-sm flex items-center gap-2"
-          >
-            <span>Learn More</span>
-            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
+            See How StreetLight Works
+          </Link>
         </motion.div>
       </div>
       
