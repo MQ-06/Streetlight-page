@@ -1,6 +1,7 @@
 'use client';
 
-export const STREETLIGHT_DOWNLOAD_PLACEHOLDER_URL = 'https://example.com/streetlight.apk';
+export const STREETLIGHT_DOWNLOAD_URL =
+  'https://github.com/MQ-06/STREETLIGHT-PK/releases/download/v1.0.0/app-release.apk';
 
 const buttonClassName =
   'inline-flex shrink-0 items-center justify-center rounded-xl bg-primary px-6 py-3 text-xs font-bold uppercase tracking-wider text-[#0B0F14] shadow-[0_0_18px_rgba(244,185,66,0.45),0_0_42px_rgba(244,185,66,0.22)] transition-transform duration-300 hover:scale-[1.02] hover:shadow-[0_0_32px_rgba(244,185,66,0.55)] sm:px-8 sm:py-3.5 sm:text-sm';
@@ -13,7 +14,7 @@ type DownloadStreetLightCTAProps = {
 };
 
 export default function DownloadStreetLightCTA({
-  downloadUrl = STREETLIGHT_DOWNLOAD_PLACEHOLDER_URL,
+  downloadUrl = STREETLIGHT_DOWNLOAD_URL,
   variant = 'banner',
   showPlaceholderNote = false,
   className = '',
@@ -22,7 +23,6 @@ export default function DownloadStreetLightCTA({
     return (
       <a
         href={downloadUrl}
-        download
         target="_blank"
         rel="noreferrer"
         className={`${buttonClassName} ${className}`.trim()}
@@ -41,7 +41,7 @@ export default function DownloadStreetLightCTA({
             Help your city improve one report at a time.
           </p>
         </div>
-        <a href={downloadUrl} download target="_blank" rel="noreferrer" className={buttonClassName}>
+        <a href={downloadUrl} target="_blank" rel="noreferrer" className={buttonClassName}>
           Download App
         </a>
       </div>

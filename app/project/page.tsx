@@ -426,7 +426,7 @@ function ImpactLightReveal() {
           </div>
         </div>
 
-        <DownloadStreetLightCTA variant="banner" showPlaceholderNote className="mt-10" />
+        <DownloadStreetLightCTA variant="banner" className="mt-10" />
       </div>
     </div>
   );
