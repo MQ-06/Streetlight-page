@@ -129,7 +129,7 @@ const StreetLightHero = () => {
             className="text-sm md:text-base font-light text-black tracking-[0.3em] uppercase mb-16 flex items-center justify-center gap-4 text-bold"
           >
             <span className="h-[1px] w-8 bg-black text-bold" />
-            Report city problems quickly, transparently, effectively.
+            Built in Pakistan, Built for Pakistan.
             <span className="h-[1px] w-8 bg-black text-bold" />
           </p>
         </motion.div>
